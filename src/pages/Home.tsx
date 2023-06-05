@@ -1,15 +1,19 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
 // constants
 import { LocalStrings } from "../data/language";
+import { UserStateData } from "../@types/data-models";
+
+// actions
+import { getLocalSession } from "../store/features/userSlice";
 
 // components
 import Products from "../components/Products";
 
 // files
 import DownArrow from "../assets/icons/down-arrow.png";
-import { useNavigate } from "react-router-dom";
-import { getLocalSession } from "../store/features/userSlice";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
 
 const Home = () => {
   // useEffect(() => {}, [])
@@ -19,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     dispatch(
       getLocalSession({
-        callback: (response) => {
+        callback: (response: UserStateData) => {
           if (!response.isLoggedIn) Navigate("/login");
         },
       })
