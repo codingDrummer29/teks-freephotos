@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "firstname": "Sara",
+    "lastname": "David",
+    "email": "test@freephotos.com",
+    "phone": "",
+    "country": "",
+    "password": "test1234"
+  },
+  {
+    "id": 2,
+    "firstname": "Anubhab",
+    "lastname": "Mukherjee",
+    "email": "anubhab@teks.co.in",
+    "phone": "",
+    "country": "",
+    "password": "test1234"
+  }
+]
