@@ -60,14 +60,20 @@ const Navbar = () => {
 
         {/* --- Settings | Logout --- */}
         <div className="col-span-1 flex justify-end w-full h-full items-center gap-2">
-          <NavLink to={"/profile"}>
+          <NavLink
+            className={`${userIsLoggedIn ? "block" : "hidden"}`}
+            to={"/profile"}
+          >
             <img
               className="h-6 aspect-square"
               src={SettingsIcon}
               alt={LocalStrings.img_alt_profile}
             />
           </NavLink>
-          <div className="cursor-pointer" onClick={handleLogout}>
+          <div
+            className={`${userIsLoggedIn ? "block" : "hidden"} cursor-pointer`}
+            onClick={handleLogout}
+          >
             {LocalStrings.button_logout}
           </div>
         </div>
